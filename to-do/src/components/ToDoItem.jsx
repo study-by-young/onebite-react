@@ -1,9 +1,14 @@
 import "./ToDoItem.css";
 
-const ToDoItem = ({ id, isDone, content, date }) => {
+const ToDoItem = ({ id, isDone, content, date, onUpdate }) => {
+  const onChangeCheckbox = () => {
+    onUpdate(id);
+  };
+
   return (
     <div className="ToDoItem">
       <input
+        onChange={onChangeCheckbox}
         readOnly
         checked={isDone}
         type="checkbox"
