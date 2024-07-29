@@ -35,7 +35,7 @@ function App() {
           element={<New />}
         />
         <Route
-          path="/diary"
+          path="/diary/:id"
           element={<Diary />}
         />
         <Route
